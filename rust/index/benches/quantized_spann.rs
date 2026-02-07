@@ -95,20 +95,20 @@ fn spann_config() -> SpannIndexConfig {
         write_nprobe: Some(64),
         nreplica_count: Some(2),
         write_rng_epsilon: Some(8.0),
-        write_rng_factor: Some(1.0),
+        write_rng_factor: Some(1.5),
 
         // Cluster maintenance
         split_threshold: Some(512),
         merge_threshold: Some(128),
-        reassign_neighbor_count: Some(32),
+        reassign_neighbor_count: Some(8),
 
         // Commit-time parameters
         center_drift_threshold: Some(0.125),
 
         // HNSW parameters
-        ef_construction: Some(128),
-        ef_search: Some(64),
-        max_neighbors: Some(16),
+        ef_construction: Some(256),
+        ef_search: Some(128),
+        max_neighbors: Some(24),
 
         // Flag
         quantize: true,
